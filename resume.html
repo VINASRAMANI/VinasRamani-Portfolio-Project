@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Resume Builder</title>
+  <meta name="description" content="Build your professional resume with live preview, template selection, and PDF download." />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=DM+Sans:wght@300;400;500;600&family=Fira+Code:wght@400;500&family=Crimson+Text:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <!-- Cropper.js -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/cropperjs/1.6.1/cropper.min.css" />
+  <link rel="stylesheet" href="resume.css" />
+</head>
+<body>
+
+<!-- TOP AD -->
+
+<!-- NAV -->
+<nav class="builder-nav">
+  <div class="builder-nav-inner">
+    <a class="nav-logo" href="index.html"><i class="fas fa-arrow-left me-2" style="font-size:.8rem;"></i>Resume<span>builder</span></a>
+    <div class="d-flex align-items-center gap-3">
+      <button class="btn-nav-ghost" id="btnPreviewMobile"><i class="fas fa-eye"></i> Preview</button>
+      <button class="btn-download" id="btnDownloadPDF"><i class="fas fa-download"></i> Download PDF</button>
+    </div>
+  </div>
+</nav>
+
+<!-- MAIN LAYOUT -->
+<div class="builder-layout">
+
+  <!-- LEFT: FORM PANEL -->
+  <div class="form-panel" id="formPanel">
+
+    <!-- TABS -->
+    <div class="panel-tabs">
+      <button class="panel-tab active" data-tab="form"><i class="fas fa-edit"></i> Content</button>
+      <button class="panel-tab" data-tab="templates"><i class="fas fa-th-large"></i> Templates</button>
+      <button class="panel-tab" data-tab="customize"><i class="fas fa-palette"></i> Style</button>
+    </div>
+
+    <!-- ─── TAB: FORM ─── -->
+    <div class="tab-content active" id="tab-form">
+      <div class="form-scroll">
+
+        <!-- PHOTO -->
+        <div class="form-section">
+          <div class="form-section-header">
+            <i class="fas fa-camera"></i> Profile Photo
+          </div>
+          <div class="photo-upload-area" id="photoUploadArea">
+            <div class="photo-preview" id="photoPreview">
+              <i class="fas fa-user"></i>
+            </div>
+            <div>
+              <button class="btn-upload" id="btnUploadPhoto"><i class="fas fa-upload me-1"></i>Upload Photo</button>
+              <input type="file" id="photoInput" accept="image/*" hidden />
+              <p class="upload-hint">JPG, PNG, or GIF. Crop after upload.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- PERSONAL INFO -->
+        <div class="form-section">
+          <div class="form-section-header"><i class="fas fa-user"></i> Personal Information</div>
+          <div class="row g-3">
+            <div class="col-12">
+              <label class="form-label">Full Name *</label>
+              <input type="text" class="form-control rc-input" id="fullName" placeholder="e.g. Jane Doe" data-preview="previewName" />
+            </div>
+            <div class="col-md-6">
+              <label class="form-label">Job Title</label>
+              <input type="text" class="form-control rc-input" id="jobTitle" placeholder="e.g. Product Designer" />
+            </div>
+            <div class="col-md-6">
+              <label class="form-label">Phone</label>
+              <input type="tel" class="form-control rc-input" id="phone" placeholder="+1 (555) 000-0000" />
+            </div>
+            <div class="col-md-6">
+              <label class="form-label">Email</label>
+              <input type="email" class="form-control rc-input" id="email" placeholder="jane@example.com" />
+            </div>
+            <div class="col-md-6">
+              <label class="form-label">LinkedIn / Website</label>
+              <input type="text" class="form-control rc-input" id="website" placeholder="linkedin.com/in/jane" />
+            </div>
+            <div class="col-12">
+              <label class="form-label">Address</label>
+              <input type="text" class="form-control rc-input" id="address" placeholder="City, State, Country" />
+            </div>
+          </div>
+        </div>
+
+        <!-- SUMMARY -->
+        <div class="form-section">
+          <div class="form-section-header"><i class="fas fa-align-left"></i> Profile Summary</div>
+          <textarea class="form-control rc-input" id="summary" rows="4" placeholder="Write 2-3 sentences about your experience, skills, and career goals..."></textarea>
+        </div>
+
+        <!-- EXPERIENCE -->
+        <div class="form-section">
+          <div class="form-section-header">
+            <span><i class="fas fa-briefcase"></i> Work Experience</span>
+            <button class="btn-add-section" id="addExperience"><i class="fas fa-plus"></i> Add</button>
+          </div>
+          <div id="experienceContainer">
+            <!-- Dynamic entries -->
+          </div>
+        </div>
+
+        <!-- EDUCATION -->
+        <div class="form-section">
+          <div class="form-section-header">
+            <span><i class="fas fa-graduation-cap"></i> Education</span>
+            <button class="btn-add-section" id="addEducation"><i class="fas fa-plus"></i> Add</button>
+          </div>
+          <div id="educationContainer"></div>
+        </div>
+
+        <!-- SKILLS -->
+        <div class="form-section">
+          <div class="form-section-header"><i class="fas fa-star"></i> Skills</div>
+          <div class="skills-input-wrap">
+            <input type="text" class="form-control rc-input" id="skillInput" placeholder="Type a skill and press Enter..." />
+            <div class="skills-tags" id="skillsTags"></div>
+          </div>
+        </div>
+
+        <!-- PROJECTS -->
+        <div class="form-section">
+          <div class="form-section-header">
+            <span><i class="fas fa-code"></i> Projects</span>
+            <button class="btn-add-section" id="addProject"><i class="fas fa-plus"></i> Add</button>
+          </div>
+          <div id="projectsContainer"></div>
+        </div>
+
+        <!-- LANGUAGES -->
+        <div class="form-section">
+          <div class="form-section-header">
+            <span><i class="fas fa-language"></i> Languages</span>
+            <button class="btn-add-section" id="addLanguage"><i class="fas fa-plus"></i> Add</button>
+          </div>
+          <div id="languagesContainer"></div>
+        </div>
+
+      </div><!-- /form-scroll -->
+    </div><!-- /tab-form -->
+
+    <!-- ─── TAB: TEMPLATES ─── -->
+    <div class="tab-content" id="tab-templates">
+      <div class="form-scroll">
+        <div class="templates-intro">
+          <p>Choose a template to instantly update your resume preview.</p>
+        </div>
+        <div class="templates-grid" id="templatesGrid">
+          <!-- Populated by JS -->
+        </div>
+      </div>
+    </div>
+
+    <!-- ─── TAB: CUSTOMIZE ─── -->
+    <div class="tab-content" id="tab-customize">
+      <div class="form-scroll">
+        <div class="form-section">
+          <div class="form-section-header"><i class="fas fa-tint"></i> Theme Color</div>
+          <div class="color-swatches" id="colorSwatches">
+            <div class="swatch active" data-color="#c9a84c" style="background:#c9a84c;" title="Gold"></div>
+            <div class="swatch" data-color="#2563eb" style="background:#2563eb;" title="Blue"></div>
+            <div class="swatch" data-color="#16a34a" style="background:#16a34a;" title="Green"></div>
+            <div class="swatch" data-color="#dc2626" style="background:#dc2626;" title="Red"></div>
+            <div class="swatch" data-color="#7c3aed" style="background:#7c3aed;" title="Purple"></div>
+            <div class="swatch" data-color="#0891b2" style="background:#0891b2;" title="Teal"></div>
+            <div class="swatch" data-color="#ea580c" style="background:#ea580c;" title="Orange"></div>
+            <div class="swatch" data-color="#0d1117" style="background:#0d1117;" title="Black"></div>
+          </div>
+          <div class="mt-2 d-flex align-items-center gap-2">
+            <label class="form-label mb-0" style="font-size:.8rem;">Custom:</label>
+            <input type="color" id="customColor" value="#c9a84c" style="width:40px;height:28px;border:none;border-radius:4px;cursor:pointer;" />
+          </div>
+        </div>
+
+        <div class="form-section">
+          <div class="form-section-header"><i class="fas fa-font"></i> Font Family</div>
+          <select class="form-select rc-input" id="fontSelect">
+            <option value="DM Sans">DM Sans (Modern)</option>
+            <option value="Playfair Display">Playfair Display (Elegant)</option>
+            <option value="Crimson Text">Crimson Text (Classic)</option>
+            <option value="Fira Code">Fira Code (Technical)</option>
+            <option value="Georgia">Georgia (Traditional)</option>
+            <option value="Arial">Arial (Simple)</option>
+          </select>
+        </div>
+
+        <div class="form-section">
+          <div class="form-section-header"><i class="fas fa-text-height"></i> Font Size</div>
+          <input type="range" class="form-range" id="fontSizeRange" min="10" max="16" value="13" step="0.5" />
+          <div style="font-size:.8rem;color:#6b7280;" id="fontSizeLabel">13px</div>
+        </div>
+
+        <div class="form-section">
+          <div class="form-section-header"><i class="fas fa-arrows-alt-v"></i> Line Spacing</div>
+          <input type="range" class="form-range" id="lineSpacingRange" min="1.2" max="2.0" value="1.5" step="0.1" />
+          <div style="font-size:.8rem;color:#6b7280;" id="lineSpacingLabel">1.5</div>
+        </div>
+
+        <div class="form-section">
+          <div class="form-section-header"><i class="fas fa-eye-slash"></i> Show / Hide Sections</div>
+          <div class="section-toggles">
+            <label class="toggle-row"><input type="checkbox" class="section-toggle" data-section="summary" checked /> <span>Profile Summary</span></label>
+            <label class="toggle-row"><input type="checkbox" class="section-toggle" data-section="experience" checked /> <span>Work Experience</span></label>
+            <label class="toggle-row"><input type="checkbox" class="section-toggle" data-section="education" checked /> <span>Education</span></label>
+            <label class="toggle-row"><input type="checkbox" class="section-toggle" data-section="skills" checked /> <span>Skills</span></label>
+            <label class="toggle-row"><input type="checkbox" class="section-toggle" data-section="projects" checked /> <span>Projects</span></label>
+            <label class="toggle-row"><input type="checkbox" class="section-toggle" data-section="languages" checked /> <span>Languages</span></label>
+          </div>
+        </div>
+
+        <div class="form-section">
+          <div class="form-section-header"><i class="fas fa-arrows-alt"></i> Section Order</div>
+          <div class="section-order-list" id="sectionOrderList">
+            <div class="order-item" draggable="true" data-section="summary"><i class="fas fa-grip-vertical"></i> Profile Summary</div>
+            <div class="order-item" draggable="true" data-section="experience"><i class="fas fa-grip-vertical"></i> Work Experience</div>
+            <div class="order-item" draggable="true" data-section="education"><i class="fas fa-grip-vertical"></i> Education</div>
+            <div class="order-item" draggable="true" data-section="skills"><i class="fas fa-grip-vertical"></i> Skills</div>
+            <div class="order-item" draggable="true" data-section="projects"><i class="fas fa-grip-vertical"></i> Projects</div>
+            <div class="order-item" draggable="true" data-section="languages"><i class="fas fa-grip-vertical"></i> Languages</div>
+          </div>
+          <p style="font-size:.75rem;color:#9ca3af;margin-top:8px;">Drag to reorder sections in your resume.</p>
+        </div>
+
+      </div>
+    </div>
+
+  </div><!-- /form-panel -->
+
+  <!-- MIDDLE AD (SIDEBAR) -->
+
+
+  <!-- RIGHT: PREVIEW PANEL -->
+  <div class="preview-panel" id="previewPanel">
+    <div class="preview-toolbar">
+      <span class="preview-label"><i class="fas fa-eye me-1"></i> Live Preview</span>
+      <div class="d-flex gap-2">
+        <button class="btn-nav-ghost" id="btnZoomOut" title="Zoom Out"><i class="fas fa-search-minus"></i></button>
+        <span class="zoom-label" id="zoomLabel"></span>
+        <button class="btn-nav-ghost" id="btnZoomIn" title="Zoom In"><i class="fas fa-search-plus"></i></button>
+      </div>
+    </div>
+    <div class="preview-scroll">
+      <div class="preview-scale-wrapper" id="previewScaleWrapper">
+        <div class="resume-page" id="resumePreview">
+          <!-- Template renders here -->
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div><!-- /builder-layout -->
+
+<!-- ═══ CROP MODAL ═══ -->
+<div class="modal fade" id="cropModal" tabindex="-1">
+  <div class="modal-dialog modal-lg modal-dialog-centered">
+    <div class="modal-content" style="background:#1a1a2e;border:1px solid #2d2d4e;border-radius:12px;">
+      <div class="modal-header" style="border-color:#2d2d4e;">
+        <h5 class="modal-title" style="color:#faf8f3;font-family:'Playfair Display',serif;">Crop Profile Photo</h5>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body">
+        <div style="max-height:450px;overflow:hidden;border-radius:8px;">
+          <img id="cropperImage" src="" alt="Crop" style="max-width:100%;display:block;" />
+        </div>
+      </div>
+      <div class="modal-footer" style="border-color:#2d2d4e;">
+        <div class="d-flex gap-2 me-auto">
+          <button class="btn-nav-ghost" id="btnCropRotate"><i class="fas fa-redo"></i> Rotate</button>
+          <button class="btn-nav-ghost" id="btnCropZoomIn"><i class="fas fa-search-plus"></i></button>
+          <button class="btn-nav-ghost" id="btnCropZoomOut"><i class="fas fa-search-minus"></i></button>
+        </div>
+        <button type="button" class="btn-nav-ghost" data-bs-dismiss="modal">Cancel</button>
+        <button type="button" class="btn-download" id="btnCropConfirm"><i class="fas fa-check me-1"></i>Use Photo</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- BOTTOM AD -->
+
+<!-- SCRIPTS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/cropperjs/1.6.1/cropper.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
