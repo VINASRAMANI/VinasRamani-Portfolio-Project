@@ -1,0 +1,867 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Govindji Jewellers - Premium Gold & Diamond Jewellery in Surat.">
+<title>Govindji Jewellers | Premium Gold & Diamond Jewellery in Surat</title>
+
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+<!-- Font Awesome Icons -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<!-- 👇 Our Custom CSS -->
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- ═══════ HEADER ═══════ -->
+<header id="main-header">
+  <div class="header-inner">
+    <a href="#" class="logo" onclick="showPage('home')">
+      <span class="logo-main">Govindji Jewellers</span>
+      <span class="logo-sub">ગોવિંદજી જ્વેલર્સ · Since Est.</span>
+    </a>
+    <nav id="desktop-nav">
+      <a href="#" onclick="showPage('home')"       class="active" data-page="home">Home</a>
+      <a href="#" onclick="showPage('collection')"            data-page="collection">Collection</a>
+      <a href="#" onclick="showPage('gallery')"               data-page="gallery">Gallery</a>
+      <a href="#" onclick="showPage('about')"                 data-page="about">About</a>
+      <a href="#" onclick="showPage('contact')"  class="nav-cta" data-page="contact">Contact Us</a>
+    </nav>
+    <div class="hamburger" id="hamburger" onclick="toggleMenu()">
+      <span></span><span></span><span></span>
+    </div>
+  </div>
+</header>
+
+<!-- ═══════ MOBILE NAV ═══════ -->
+<div class="mobile-nav" id="mobile-nav">
+  <a href="#" onclick="showPage('home');       toggleMenu()">Home</a>
+  <a href="#" onclick="showPage('collection'); toggleMenu()">Collection</a>
+  <a href="#" onclick="showPage('gallery');    toggleMenu()">Gallery</a>
+  <a href="#" onclick="showPage('about');      toggleMenu()">About</a>
+  <a href="#" onclick="showPage('contact');    toggleMenu()">Contact</a>
+</div>
+
+<!-- ═══════════════════════════════════════════════════════ -->
+<!--                     HOME PAGE                         -->
+<!-- ═══════════════════════════════════════════════════════ -->
+<div id="page-home">
+
+  <!-- HERO -->
+  <section id="home">
+    <div class="hero-bg">
+      <div style="position:absolute;inset:0;background:rgba(0,0,0,0.68);z-index:1;"></div>
+      <div class="hero-pattern" style="z-index:2;"></div>
+      <div class="gem" style="left:10%;animation-duration:8s;animation-delay:0s;width:4px;height:4px;"></div>
+      <div class="gem" style="left:25%;animation-duration:12s;animation-delay:2s;width:6px;height:6px;"></div>
+      <div class="gem" style="left:45%;animation-duration:10s;animation-delay:4s;width:3px;height:3px;"></div>
+      <div class="gem" style="left:65%;animation-duration:9s;animation-delay:1s;width:5px;height:5px;"></div>
+      <div class="gem" style="left:80%;animation-duration:11s;animation-delay:3s;width:4px;height:4px;"></div>
+    </div>
+    <div class="hero-content">
+      <div class="hero-ornament">
+        <div class="hero-ornament-line"></div>
+        <div class="hero-ornament-diamond"></div>
+        <div class="hero-ornament-diamond" style="width:4px;height:4px;opacity:0.5;"></div>
+        <div class="hero-ornament-diamond"></div>
+        <div class="hero-ornament-line"></div>
+      </div>
+      <div class="hero-gujarati">ગોવિંદજી જ્વેલર્સ</div>
+      <h1 class="hero-title">Govindji<br><span>Jewellers</span></h1>
+      <p class="hero-subtitle">Premium Gold &amp; Diamond Jewellery in Surat</p>
+      <div class="hero-buttons">
+        <a href="#" class="btn-primary" onclick="showPage('collection')">View Collection</a>
+        <a href="#" class="btn-outline" onclick="showPage('contact')">Contact Us</a>
+      </div>
+    </div>
+    <div class="hero-scroll">
+      <div class="scroll-line"></div>
+      Scroll
+    </div>
+  </section>
+
+  <!-- ABOUT SECTION -->
+  <section id="about">
+    <div class="about-grid">
+      <div class="about-visual reveal">
+        <div class="about-img-frame">
+          <img src="MODEL1.jpg" alt="Govindji Jewellers" style="width:100%;aspect-ratio:4/5;object-fit:cover;display:block;">
+          <div class="about-badge">
+            <span class="about-badge-num">25+</span>
+            <span class="about-badge-text">Years of Trust</span>
+          </div>
+        </div>
+      </div>
+      <div class="about-text reveal reveal-delay-2">
+        <div class="section-label">Our Story</div>
+        <h2 class="section-title" style="text-align:left;">Crafting Moments,<br>Preserving Memories</h2>
+        <div class="section-divider" style="justify-content:flex-start;margin-bottom:2rem;">
+          <div class="divider-line"></div>
+          <div class="divider-gem"></div>
+          <div class="divider-line" style="background:linear-gradient(to right,var(--gold),transparent);"></div>
+        </div>
+        <p class="about-desc">Govindji Jewellers has been a trusted name in Surat's jewellery landscape for over two decades. Nestled in the heart of Simada Gam, our store is a destination for those who appreciate the finest in gold, diamond, and bridal jewellery.</p>
+        <p class="about-desc">We believe every piece of jewellery tells a story — of love, celebration, and tradition. Our master craftsmen blend age-old techniques with contemporary design to create pieces that are truly timeless.</p>
+        <div class="about-stats">
+          <div class="stat-item"><span class="stat-num">25+</span><span class="stat-label">Years</span></div>
+          <div class="stat-item"><span class="stat-num">5K+</span><span class="stat-label">Happy Clients</span></div>
+          <div class="stat-item"><span class="stat-num">4.6★</span><span class="stat-label">Rating</span></div>
+        </div>
+        <a href="#" class="btn-primary" onclick="showPage('about')">Know More</a>
+      </div>
+    </div>
+  </section>
+
+<!-- CATEGORIES with Banner & Auto Scroll -->
+<section id="categories">
+  <!-- Banner Image (Full Width) -->
+ <div class="category-banner reveal">
+
+  <img src="RING12.jpg" class="banner-image">
+
+  <div class="category-banner-content">
+    <span class="banner-subtitle">Govindji Jewellers</span>
+    <h2 class="banner-title">Explore Our <span>Premium</span> Collection</h2>
+    <p class="banner-desc">Handcrafted gold, diamond & bridal jewellery with BIS hallmark and certified diamonds</p>
+    <a href="#" class="banner-btn" onclick="showPage('collection')">
+      View All Collections <i class="fas fa-arrow-right"></i>
+    </a>
+  </div>
+
+</div>
+  
+  <!-- Auto Scroll Categories Container -->
+  <div class="categories-scroll-container">
+    <div class="categories-scroll-wrapper" id="categoryScrollWrapper">
+      <!-- Categories (Duplicate for seamless scroll) -->
+      <div class="categories-scroll-track" id="categoryScrollTrack">
+        <!-- Original 6 Categories -->
+        <a href="#" class="cat-item" onclick="showPage('collection')">
+          <div class="cat-bg" style="background-image: url('MODEL.jpg');"></div>
+          <div class="cat-overlay"></div>
+          <div class="cat-content">
+            <div class="cat-name">Gold Jewellery</div>
+            <div class="cat-count">Premium 22K & 24K Gold</div>
+          </div>
+          <div class="cat-arrow"><i class="fas fa-arrow-right"></i></div>
+        </a>
+
+        <a href="#" class="cat-item" onclick="showPage('collection')">
+          <div class="cat-bg" style="background-image: url('HAR1.jpg');"></div>
+          <div class="cat-overlay"></div>
+          <div class="cat-content">
+            <div class="cat-name">Diamond Jewellery</div>
+            <div class="cat-count">Certified Diamonds</div>
+          </div>
+          <div class="cat-arrow"><i class="fas fa-arrow-right"></i></div>
+        </a>
+
+        <a href="#" class="cat-item" onclick="showPage('collection')">
+          <div class="cat-bg" style="background-image: url('earring.jpg');"></div>
+          <div class="cat-overlay"></div>
+          <div class="cat-content">
+            <div class="cat-name">Bridal Sets</div>
+            <div class="cat-count">Complete Bridal Collections</div>
+          </div>
+          <div class="cat-arrow"><i class="fas fa-arrow-right"></i></div>
+        </a>
+
+        <a href="#" class="cat-item" onclick="showPage('collection')">
+          <div class="cat-bg" style="background-image: url('BANGELS.jpg');"></div>
+          <div class="cat-overlay"></div>
+          <div class="cat-content">
+            <div class="cat-name">Necklaces</div>
+            <div class="cat-count">Elegant Designs</div>
+          </div>
+          <div class="cat-arrow"><i class="fas fa-arrow-right"></i></div>
+        </a>
+
+        <a href="#" class="cat-item" onclick="showPage('collection')">
+          <div class="cat-bg" style="background-image: url('chain2.jpg');"></div>
+          <div class="cat-overlay"></div>
+          <div class="cat-content">
+            <div class="cat-name">Bangles</div>
+            <div class="cat-count">Traditional & Modern</div>
+          </div>
+          <div class="cat-arrow"><i class="fas fa-arrow-right"></i></div>
+        </a>
+
+        <a href="#" class="cat-item" onclick="showPage('collection')">
+          <div class="cat-bg" style="background-image: url('daimondring.jpg');"></div>
+          <div class="cat-overlay"></div>
+          <div class="cat-content">
+            <div class="cat-name">Earrings</div>
+            <div class="cat-count">Studs, Drops & Jhumkas</div>
+          </div>
+          <div class="cat-arrow"><i class="fas fa-arrow-right"></i></div>
+        </a>
+        
+        <!-- Duplicate for seamless scroll (Copy of first 3) -->
+        <a href="#" class="cat-item" onclick="showPage('collection')">
+          <div class="cat-bg" style="background-image: url('har3.jpg');"></div>
+          <div class="cat-overlay"></div>
+          <div class="cat-content">
+            <div class="cat-name">Gold Jewellery</div>
+            <div class="cat-count">Premium 22K & 24K Gold</div>
+          </div>
+          <div class="cat-arrow"><i class="fas fa-arrow-right"></i></div>
+        </a>
+
+        <a href="#" class="cat-item" onclick="showPage('collection')">
+          <div class="cat-bg" style="background-image: url('Grand\ Haar\ Necklace\ Set.jpg');"></div>
+          <div class="cat-overlay"></div>
+          <div class="cat-content">
+            <div class="cat-name">Diamond Jewellery</div>
+            <div class="cat-count">Certified Diamonds</div>
+          </div>
+          <div class="cat-arrow"><i class="fas fa-arrow-right"></i></div>
+        </a>
+
+        <a href="#" class="cat-item" onclick="showPage('collection')">
+          <div class="cat-bg" style="background-image: url('img.jpg');"></div>
+          <div class="cat-overlay"></div>
+          <div class="cat-content">
+            <div class="cat-name">Bridal Sets</div>
+            <div class="cat-count">Complete Bridal Collections</div>
+          </div>
+          <div class="cat-arrow"><i class="fas fa-arrow-right"></i></div>
+        </a>
+      </div>
+    </div>
+    
+    <!-- Scroll Controls -->
+ 
+    
+    <!-- Scroll Indicators -->
+    <div class="category-indicators" id="categoryIndicators">
+      <span class="category-dot active"></span>
+      <span class="category-dot"></span>
+      <span class="category-dot"></span>
+      <span class="category-dot"></span>
+      <span class="category-dot"></span>
+      <span class="category-dot"></span>
+    </div>
+  </div>
+</section>
+
+  <!-- GALLERY (Home Preview) -->
+  <section id="gallery">
+    <div class="section-label reveal" style="color:var(--gold);">Visual Showcase</div>
+    <h2 class="section-title light reveal">Our Jewellery Gallery</h2>
+    <div class="section-divider reveal">
+      <div class="divider-line"></div><div class="divider-gem"></div>
+      <div class="divider-line" style="background:linear-gradient(to right,var(--gold),transparent);"></div>
+    </div>
+    <div class="gallery-grid" style="max-width:1300px;margin:0 auto;">
+      <div class="gallery-item reveal">
+        <div class="gallery-bg gb-1"></div>
+        <div class="gallery-overlay"><div class="gallery-zoom"><i class="fas fa-expand"></i></div></div>
+        <div class="gallery-label">Gold Necklace Set</div>
+      </div>
+      <div class="gallery-item reveal reveal-delay-1">
+        <div class="gallery-bg gb-2"></div>
+        <div class="gallery-overlay"><div class="gallery-zoom"><i class="fas fa-expand"></i></div></div>
+        <div class="gallery-label">Diamond Ring</div>
+      </div>
+      <div class="gallery-item reveal reveal-delay-2">
+        <div class="gallery-bg gb-3"></div>
+        <div class="gallery-overlay"><div class="gallery-zoom"><i class="fas fa-expand"></i></div></div>
+        <div class="gallery-label">Bridal Set</div>
+      </div>
+      <div class="gallery-item reveal reveal-delay-1">
+        <div class="gallery-bg gb-4"></div>
+        <div class="gallery-overlay"><div class="gallery-zoom"><i class="fas fa-expand"></i></div></div>
+        <div class="gallery-label">Gold Earrings</div>
+      </div>
+    </div>
+    <div style="text-align:center;margin-top:3rem;" class="reveal">
+      <a href="#" class="btn-outline" onclick="showPage('gallery')" style="border-color:rgba(255,255,255,0.3);color:rgba(255,255,255,0.7);">View Full Gallery</a>
+    </div>
+  </section>
+
+  <!-- REVIEWS -->
+  <section id="reviews">
+    <div class="section-label reveal">Customer Testimonials</div>
+    <h2 class="section-title reveal">What Our Clients Say</h2>
+    <div class="section-divider reveal">
+      <div class="divider-line"></div><div class="divider-gem"></div>
+      <div class="divider-line" style="background:linear-gradient(to right,var(--gold),transparent);"></div>
+    </div>
+    <div class="rating-hero reveal">
+      <div class="rating-score">4.6</div>
+      <div class="rating-stars">
+        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+        <i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+      </div>
+      <div class="rating-count">Based on 23 Google Reviews</div>
+    </div>
+    <div class="reviews-grid">
+      <div class="review-card reveal">
+        <div class="review-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+        <p class="review-text">"Nice jewellery place. The collection is beautiful and the staff is very helpful. Bought a gold necklace for my wife's birthday."</p>
+        <div class="review-author"><div class="review-avatar">R</div><div><div class="review-name">Rajesh Patel</div><div class="review-date">December 2024</div></div></div>
+      </div>
+      <div class="review-card reveal reveal-delay-1">
+        <div class="review-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+        <p class="review-text">"Best jewellery design! Got my bridal set made here — absolutely stunning craftsmanship. The designs are unique and very elegant."</p>
+        <div class="review-author"><div class="review-avatar">P</div><div><div class="review-name">Priya Shah</div><div class="review-date">November 2024</div></div></div>
+      </div>
+      <div class="review-card reveal reveal-delay-2">
+        <div class="review-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i></div>
+        <p class="review-text">"Very trustworthy shop. Fair pricing and genuine gold quality. Have been their customer for many years and always satisfied."</p>
+        <div class="review-author"><div class="review-avatar">M</div><div><div class="review-name">Meena Desai</div><div class="review-date">October 2024</div></div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- MAP -->
+  <div id="map-section">
+    <div class="map-wrapper">
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3719.9693!2d72.8398!3d21.1975!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2sSyam+Nagar+Society%2C+Vraj+Chowk%2C+Simada+Gam%2C+Surat+395013!5e0!3m2!1sen!2sin!4v1234567890" allowfullscreen="" loading="lazy"></iframe>
+      <div class="map-info-card">
+        <h3>Govindji Jewellers</h3>
+        <p>Find Us Here</p>
+        <div class="map-detail"><i class="fas fa-map-marker-alt"></i><span>98, 99, 100 Syam Nagar Society, Vraj Chowk, Simada Gam, Surat, Gujarat 395013</span></div>
+        <div class="map-detail"><i class="fas fa-phone"></i><span><a href="tel:+919909900283" style="color:rgba(255,255,255,0.75);text-decoration:none;">+91 99099 00283</a></span></div>
+        <div class="map-detail"><i class="fas fa-clock"></i><span>Mon–Sat: 10:00 AM – 8:00 PM</span></div>
+        <a href="https://maps.google.com/?q=Syam+Nagar+Society+Surat" target="_blank" class="btn-primary" style="margin-top:1rem;display:inline-block;font-size:0.75rem;">Get Directions</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- CONTACT (Home) -->
+  <section id="contact" style="padding-bottom:80px;">
+    <div class="section-label reveal" style="color:var(--gold);">Get In Touch</div>
+    <h2 class="section-title light reveal">Contact Us</h2>
+    <div class="section-divider reveal">
+      <div class="divider-line"></div><div class="divider-gem"></div>
+      <div class="divider-line" style="background:linear-gradient(to right,var(--gold),transparent);"></div>
+    </div>
+    <div class="contact-grid">
+      <div class="contact-info reveal">
+        <div class="contact-info-item"><div class="contact-info-icon"><i class="fas fa-map-marker-alt"></i></div><div class="contact-info-text"><h4>Our Address</h4><p>98, 99, 100 Syam Nagar Society, Vraj Chowk, Simada Gam, Surat, Gujarat 395013</p></div></div>
+        <div class="contact-info-item"><div class="contact-info-icon"><i class="fas fa-phone"></i></div><div class="contact-info-text"><h4>Phone Number</h4><a href="tel:+919909900283">+91 99099 00283</a></div></div>
+        <div class="contact-info-item"><div class="contact-info-icon"><i class="fab fa-whatsapp"></i></div><div class="contact-info-text"><h4>WhatsApp</h4><a href="https://wa.me/919909900283">Chat on WhatsApp</a></div></div>
+        <div class="contact-info-item"><div class="contact-info-icon"><i class="fas fa-clock"></i></div><div class="contact-info-text"><h4>Working Hours</h4><p>Monday – Saturday<br>10:00 AM – 8:00 PM</p></div></div>
+      </div>
+      <div class="contact-form reveal reveal-delay-2">
+        <div class="form-group"><label class="form-label">Your Name</label><input type="text" class="form-input" placeholder="Enter your full name"></div>
+        <div class="form-group"><label class="form-label">Phone Number</label><input type="tel" class="form-input" placeholder="+91 XXXXX XXXXX"></div>
+        <div class="form-group"><label class="form-label">Message</label><textarea class="form-textarea" placeholder="Tell us about your jewellery requirements..."></textarea></div>
+        <button class="btn-submit" onclick="handleFormSubmit()"><i class="fas fa-paper-plane" style="margin-right:8px;"></i>Send Enquiry</button>
+      </div>
+    </div>
+  </section>
+
+</div><!-- end page-home -->
+
+<!-- ═══════════════════════════════════════════════════════ -->
+<!--                   COLLECTION PAGE                     -->
+<!-- ═══════════════════════════════════════════════════════ -->
+<!-- ============================================ -->
+<!-- COLLECTION PAGE WITH IMAGE UPLOAD (FULL CODE) -->
+<!-- ============================================ -->
+
+<div id="page-collection" style="display:none;">
+  <div class="page-hero">
+    <h1 class="page-hero-title">Our <span>Collection</span></h1>
+    <p class="page-hero-sub">Handcrafted with Love &amp; Precision</p>
+    <div class="breadcrumb">
+      <a href="#" onclick="showPage('home')">Home</a>
+      <i class="fas fa-chevron-right"></i>
+      <span>Collection</span>
+    </div>
+  </div>
+
+  <!-- RESET BUTTONS -->
+  <div style="text-align:center; margin:20px 0 10px;">
+    <button onclick="resetAllImages()" class="reset-btn" style="background:transparent; border:1px solid var(--gold); color:var(--gold); padding:8px 25px; border-radius:30px; cursor:pointer; font-size:0.8rem; margin:0 5px;">
+      <i class="fas fa-undo"></i> Reset All Images
+    </button>
+    
+    <select id="resetSelect" onchange="resetSpecificImage(this.value)" style="background:transparent; border:1px solid var(--gold); color:var(--gold); padding:8px 15px; border-radius:30px; cursor:pointer; font-size:0.8rem; margin:0 5px;">
+      <option value="" disabled selected>Reset Specific Image</option>
+      <option value="pbg-1">Grand Haar Necklace</option>
+      <option value="pbg-2">Diamond Solitaire</option>
+      <option value="pbg-3">Royal Bridal Set</option>
+      <option value="pbg-4">Gold Bangles</option>
+      <option value="pbg-5">Diamond Jhumka</option>
+      <option value="pbg-6">Diamond Mangalsutra</option>
+      <option value="pbg-7">Gold Ring</option>
+      <option value="pbg-8">Tennis Bracelet</option>
+      <option value="pbg-9">Antique Choker</option>
+    </select>
+  </div>
+  
+  <section style="background:var(--cream); padding: 2rem 2rem 4rem;">
+    <div class="section-label">Govindji Jewellers</div>
+    <h2 class="section-title">Jewellery Collections</h2>
+    <div class="section-divider">
+      <div class="divider-line"></div>
+      <div class="divider-gem"></div>
+      <div class="divider-line" style="background:linear-gradient(to right,var(--gold),transparent);"></div>
+    </div>
+    
+    <div class="collection-grid">
+      <!-- PRODUCT 1 -->
+      <div class="product-card reveal">
+        <div class="product-img">
+          <div class="product-img-bg" id="pbg-1" style="background: url('MODEL3.jpg') center center / cover no-repeat;"></div>
+          <div class="product-img-overlay">
+            <a href="https://wa.me/919909900283?text=I'm interested in the Grand Haar Necklace Set" target="_blank" class="product-enquiry-btn">Enquire Now</a>
+          </div>
+          <div class="product-tag">Gold</div>
+          <label class="upload-btn" title="Image બદલો">
+            <i class="fas fa-camera"></i>
+            <input type="file" accept="image/*" onchange="changeImage(this, 'pbg-1')" style="display:none;">
+          </label>
+        </div>
+        <div class="product-info">
+          <div class="product-category">Gold Jewellery</div>
+          <div class="product-name">Grand Haar Necklace Set</div>
+          <div class="product-desc">Exquisite 22K gold necklace with traditional Indian motifs. Perfect for weddings and special occasions.</div>
+          <div class="product-footer">
+            <span class="product-price">Price on Request</span>
+            <a href="https://wa.me/919909900283" target="_blank" class="product-enquiry-link">Enquire →</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- PRODUCT 2 -->
+      <div class="product-card reveal reveal-delay-1">
+        <div class="product-img">
+          <div class="product-img-bg" id="pbg-2" style="background: url('BANGELS.jpg') center center / cover no-repeat;"></div>
+          <div class="product-img-overlay">
+            <a href="https://wa.me/919909900283?text=I'm interested in the Diamond Solitaire Ring" target="_blank" class="product-enquiry-btn">Enquire Now</a>
+          </div>
+          <div class="product-tag" style="background:var(--black);color:var(--gold);">Diamond</div>
+          <label class="upload-btn" title="Image બદલો">
+            <i class="fas fa-camera"></i>
+            <input type="file" accept="image/*" onchange="changeImage(this, 'pbg-2')" style="display:none;">
+          </label>
+        </div>
+        <div class="product-info">
+          <div class="product-category">Diamond Jewellery</div>
+          <div class="product-name">Diamond Solitaire Ring</div>
+          <div class="product-desc">Certified diamond solitaire in 18K white gold setting. Symbol of eternal love and elegance.</div>
+          <div class="product-footer">
+            <span class="product-price">Price on Request</span>
+            <a href="https://wa.me/919909900283" target="_blank" class="product-enquiry-link">Enquire →</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- PRODUCT 3 -->
+      <div class="product-card reveal reveal-delay-2">
+        <div class="product-img">
+          <div class="product-img-bg" id="pbg-3" style="background: url('earring.jpg') center center / cover no-repeat;"></div>
+          <div class="product-img-overlay">
+            <a href="https://wa.me/919909900283?text=I'm interested in the Bridal Gold Set" target="_blank" class="product-enquiry-btn">Enquire Now</a>
+          </div>
+          <div class="product-tag" style="background:#8b0000;">Bridal</div>
+          <label class="upload-btn" title="Image બદલો">
+            <i class="fas fa-camera"></i>
+            <input type="file" accept="image/*" onchange="changeImage(this, 'pbg-3')" style="display:none;">
+          </label>
+        </div>
+        <div class="product-info">
+          <div class="product-category">Bridal Jewellery</div>
+          <div class="product-name">Royal Bridal Gold Set</div>
+          <div class="product-desc">Complete bridal set including necklace, earrings, bangles, and maang tikka in 22K gold.</div>
+          <div class="product-footer">
+            <span class="product-price">Price on Request</span>
+            <a href="https://wa.me/919909900283" target="_blank" class="product-enquiry-link">Enquire →</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- PRODUCT 4 -->
+      <div class="product-card reveal">
+        <div class="product-img">
+          <div class="product-img-bg" id="pbg-4" style="background: url('HAR1.jpg') center center / cover no-repeat;"></div>
+          <div class="product-img-overlay">
+            <a href="https://wa.me/919909900283?text=I'm interested in Gold Kangan Bangles" target="_blank" class="product-enquiry-btn">Enquire Now</a>
+          </div>
+          <label class="upload-btn" title="Image બદલો">
+            <i class="fas fa-camera"></i>
+            <input type="file" accept="image/*" onchange="changeImage(this, 'pbg-4')" style="display:none;">
+          </label>
+        </div>
+        <div class="product-info">
+          <div class="product-category">Bangles</div>
+          <div class="product-name">Gold Kangan Bangles</div>
+          <div class="product-desc">Traditional gold bangles with intricate filigree work. Available in various sizes and designs.</div>
+          <div class="product-footer">
+            <span class="product-price">Price on Request</span>
+            <a href="https://wa.me/919909900283" target="_blank" class="product-enquiry-link">Enquire →</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- PRODUCT 5 -->
+      <div class="product-card reveal reveal-delay-1">
+        <div class="product-img">
+          <div class="product-img-bg" id="pbg-5" style="background: url('chain.jpg') center center / cover no-repeat;"></div>
+          <div class="product-img-overlay">
+            <a href="https://wa.me/919909900283?text=I'm interested in Diamond Jhumka Earrings" target="_blank" class="product-enquiry-btn">Enquire Now</a>
+          </div>
+          <label class="upload-btn" title="Image બદલો">
+            <i class="fas fa-camera"></i>
+            <input type="file" accept="image/*" onchange="changeImage(this, 'pbg-5')" style="display:none;">
+          </label>
+        </div>
+        <div class="product-info">
+          <div class="product-category">Earrings</div>
+          <div class="product-name">Diamond Jhumka Earrings</div>
+          <div class="product-desc">Beautiful jhumka earrings studded with diamonds in gold setting. A blend of tradition and luxury.</div>
+          <div class="product-footer">
+            <span class="product-price">Price on Request</span>
+            <a href="https://wa.me/919909900283" target="_blank" class="product-enquiry-link">Enquire →</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- PRODUCT 6 -->
+      <div class="product-card reveal reveal-delay-2">
+        <div class="product-img">
+          <div class="product-img-bg" id="pbg-6" style="background: url('BANGELS2.jpg') center center / cover no-repeat;"></div>
+          <div class="product-img-overlay">
+            <a href="https://wa.me/919909900283?text=I'm interested in the Diamond Mangalsutra" target="_blank" class="product-enquiry-btn">Enquire Now</a>
+          </div>
+          <div class="product-tag" style="background:var(--black);color:var(--gold);">New</div>
+          <label class="upload-btn" title="Image બદલો">
+            <i class="fas fa-camera"></i>
+            <input type="file" accept="image/*" onchange="changeImage(this, 'pbg-6')" style="display:none;">
+          </label>
+        </div>
+        <div class="product-info">
+          <div class="product-category">Diamond Jewellery</div>
+          <div class="product-name">Diamond Mangalsutra</div>
+          <div class="product-desc">Modern diamond mangalsutra with contemporary design. Lightweight and perfect for daily wear.</div>
+          <div class="product-footer">
+            <span class="product-price">Price on Request</span>
+            <a href="https://wa.me/919909900283" target="_blank" class="product-enquiry-link">Enquire →</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- PRODUCT 7 -->
+      <div class="product-card reveal">
+        <div class="product-img">
+          <div class="product-img-bg" id="pbg-7" style="background: url('earring.jpg') center center / cover no-repeat;"></div>
+          <div class="product-img-overlay">
+            <a href="https://wa.me/919909900283?text=I'm interested in a Gold Engagement Ring" target="_blank" class="product-enquiry-btn">Enquire Now</a>
+          </div>
+          <label class="upload-btn" title="Image બદલો">
+            <i class="fas fa-camera"></i>
+            <input type="file" accept="image/*" onchange="changeImage(this, 'pbg-7')" style="display:none;">
+          </label>
+        </div>
+        <div class="product-info">
+          <div class="product-category">Rings</div>
+          <div class="product-name">Gold Engagement Ring</div>
+          <div class="product-desc">Elegant 22K gold engagement ring with a classic design. Customize with your choice of gemstone.</div>
+          <div class="product-footer">
+            <span class="product-price">Price on Request</span>
+            <a href="https://wa.me/919909900283" target="_blank" class="product-enquiry-link">Enquire →</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- PRODUCT 8 -->
+      <div class="product-card reveal reveal-delay-1">
+        <div class="product-img">
+          <div class="product-img-bg" id="pbg-8" style="background: url('daimondset2.jpg') center center / cover no-repeat;"></div>
+          <div class="product-img-overlay">
+            <a href="https://wa.me/919909900283?text=I'm interested in the Diamond Tennis Bracelet" target="_blank" class="product-enquiry-btn">Enquire Now</a>
+          </div>
+          <label class="upload-btn" title="Image બદલો">
+            <i class="fas fa-camera"></i>
+            <input type="file" accept="image/*" onchange="changeImage(this, 'pbg-8')" style="display:none;">
+          </label>
+        </div>
+        <div class="product-info">
+          <div class="product-category">Diamond Jewellery</div>
+          <div class="product-name">Diamond Tennis Bracelet</div>
+          <div class="product-desc">Stunning diamond tennis bracelet in 18K white gold. Timeless elegance for every occasion.</div>
+          <div class="product-footer">
+            <span class="product-price">Price on Request</span>
+            <a href="https://wa.me/919909900283" target="_blank" class="product-enquiry-link">Enquire →</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- PRODUCT 9 -->
+      <div class="product-card reveal reveal-delay-2">
+        <div class="product-img">
+          <div class="product-img-bg" id="pbg-9" style="background: url('ring12.jpg') center center / cover no-repeat;"></div>
+          <div class="product-img-overlay">
+            <a href="https://wa.me/919909900283?text=I'm interested in the Antique Gold Choker" target="_blank" class="product-enquiry-btn">Enquire Now</a>
+          </div>
+          <div class="product-tag">Featured</div>
+          <label class="upload-btn" title="Image બદલો">
+            <i class="fas fa-camera"></i>
+            <input type="file" accept="image/*" onchange="changeImage(this, 'pbg-9')" style="display:none;">
+          </label>
+        </div>
+        <div class="product-info">
+          <div class="product-category">Gold Jewellery</div>
+          <div class="product-name">Antique Gold Choker</div>
+          <div class="product-desc">Heritage-inspired antique gold choker with Kundan work. A masterpiece of traditional Indian jewellery.</div>
+          <div class="product-footer">
+            <span class="product-price">Price on Request</span>
+            <a href="https://wa.me/919909900283" target="_blank" class="product-enquiry-link">Enquire →</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <div style="text-align:center; margin-top:3rem;" class="reveal">
+      <a href="https://wa.me/919909900283?text=I'd like to enquire about your jewellery collection" target="_blank" class="btn-primary">
+        <i class="fab fa-whatsapp" style="margin-right:8px;"></i>Enquire via WhatsApp
+      </a>
+    </div>
+  </section>
+</div><!-- end page-collection -->
+
+<!-- ═══════════════════════════════════════════════════════ -->
+<!--                    GALLERY PAGE                       -->
+<!-- ═══════════════════════════════════════════════════════ -->
+<div id="page-gallery" style="display:none;">
+  <div class="page-hero">
+    <h1 class="page-hero-title">Our <span>Gallery</span></h1>
+    <p class="page-hero-sub">A Visual Journey Through Our Craft</p>
+    <div class="breadcrumb">
+      <a href="#" onclick="showPage('home')">Home</a>
+      <i class="fas fa-chevron-right"></i>
+      <span>Gallery</span>
+    </div>
+  </div>
+  
+  <section style="background:var(--black); padding: 60px 2rem;">
+    <div class="section-label" style="color:var(--gold);">Visual Showcase</div>
+    <h2 class="section-title" style="color:var(--white);">Jewellery Gallery</h2>
+    <div class="section-divider">
+      <div class="divider-line"></div>
+      <div class="divider-gem"></div>
+      <div class="divider-line" style="background:linear-gradient(to right,var(--gold),transparent);"></div>
+    </div>
+    
+    <!-- Auto Scroll Gallery Container -->
+    <div class="gallery-scroll-container" id="galleryScrollContainer">
+      <div class="gallery-scroll-grid" id="galleryScrollGrid">
+        <!-- 3x3 = 9 Images -->
+        <div class="gallery-scroll-item">
+          <img src="daimondring.jpg" alt="Diamond Ring">
+          <div class="gallery-scroll-overlay">
+            <span>Diamond Ring</span>
+          </div>
+        </div>
+        
+        <div class="gallery-scroll-item">
+          <img src="bridal set.jpg" alt="Bridal Set">
+          <div class="gallery-scroll-overlay">
+            <span>Bridal Set</span>
+          </div>
+        </div>
+        
+        <div class="gallery-scroll-item">
+          <img src="ring1.jpg" alt="Gold Ring">
+          <div class="gallery-scroll-overlay">
+            <span>Gold Ring</span>
+          </div>
+        </div>
+        
+        <div class="gallery-scroll-item">
+          <img src="ring3.jpg" alt="Diamond Ring">
+          <div class="gallery-scroll-overlay">
+            <span>Diamond Ring</span>
+          </div>
+        </div>
+        
+        <div class="gallery-scroll-item">
+          <img src="neakless.jpg" alt="Necklace Set">
+          <div class="gallery-scroll-overlay">
+            <span>Necklace Set</span>
+          </div>
+        </div>
+        
+        <div class="gallery-scroll-item">
+          <img src="chain2.jpg" alt="Gold Chain">
+          <div class="gallery-scroll-overlay">
+            <span>Gold Chain</span>
+          </div>
+        </div>
+        
+        <div class="gallery-scroll-item">
+          <img src="ring.jpg" alt="Solitaire Ring">
+          <div class="gallery-scroll-overlay">
+            <span>Solitaire Ring</span>
+          </div>
+        </div>
+        
+        <div class="gallery-scroll-item">
+          <img src="bridal set.jpg" alt="Bridal">
+          <div class="gallery-scroll-overlay">
+            <span>Bridal Set</span>
+          </div>
+        </div>
+        
+        <div class="gallery-scroll-item">
+          <img src="daimondring.jpg" alt="Diamond">
+          <div class="gallery-scroll-overlay">
+            <span>Diamond Solitaire</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Scroll Indicators -->
+    <div class="scroll-indicators" id="scrollIndicators">
+      <span class="scroll-dot active"></span>
+      <span class="scroll-dot"></span>
+      <span class="scroll-dot"></span>
+    </div>
+    
+ 
+    
+    <div style="text-align:center; margin-top:3rem;">
+      <a href="https://wa.me/919909900283" target="_blank" class="btn-primary">
+        <i class="fab fa-whatsapp" style="margin-right:8px;"></i>Contact for Custom Orders
+      </a>
+    </div>
+  </section>
+</div>
+<!-- end page-gallery -->
+
+<!-- ═══════════════════════════════════════════════════════ -->
+<!--                     ABOUT PAGE                        -->
+<!-- ═══════════════════════════════════════════════════════ -->
+<div id="page-about" style="display:none;">
+  <div class="page-hero">
+    <h1 class="page-hero-title">About <span>Us</span></h1>
+    <p class="page-hero-sub">Our Story of Trust &amp; Craftsmanship</p>
+    <div class="breadcrumb"><a href="#" onclick="showPage('home')">Home</a><i class="fas fa-chevron-right"></i><span>About</span></div>
+  </div>
+  <section style="background:var(--white);">
+    <div class="about-page-content">
+      <div class="about-page-text reveal">
+        <div class="section-label" style="text-align:left;">Our Legacy</div>
+        <h2 class="section-title" style="text-align:left;font-size:2.5rem;">Govindji Jewellers<br><span style="color:var(--gold);">A Name You Trust</span></h2>
+        <div class="section-divider" style="justify-content:flex-start;margin-bottom:2rem;"><div class="divider-line"></div><div class="divider-gem"></div><div class="divider-line" style="background:linear-gradient(to right,var(--gold),transparent);"></div></div>
+        <p>Govindji Jewellers is a trusted jewellery store in Surat offering gold, diamond, and bridal jewellery with beautiful craftsmanship and traditional designs.</p>
+        <p>Our journey began with a simple belief — that jewellery is more than an adornment; it is a memory, an emotion, and a legacy passed down through generations.</p>
+        <p>From elegant everyday gold pieces to elaborate bridal sets and dazzling diamond jewellery, every creation at Govindji Jewellers is crafted with precision and passion.</p>
+        <ul class="values-list">
+          <li><i class="fas fa-check-circle"></i><span><strong>BIS Hallmarked Gold</strong> — All our gold jewellery is BIS hallmarked, ensuring purity and authenticity you can trust.</span></li>
+          <li><i class="fas fa-check-circle"></i><span><strong>Certified Diamonds</strong> — Our diamonds come with international certification for quality and cut assurance.</span></li>
+          <li><i class="fas fa-check-circle"></i><span><strong>Custom Design Service</strong> — Bring your vision to life with our bespoke jewellery design service.</span></li>
+          <li><i class="fas fa-check-circle"></i><span><strong>Fair &amp; Transparent Pricing</strong> — No hidden charges. We believe in honest, market-rate pricing.</span></li>
+          <li><i class="fas fa-check-circle"></i><span><strong>Exchange &amp; Buyback</strong> — We offer fair exchange and buyback on all gold jewellery purchased from us.</span></li>
+        </ul>
+      </div>
+      <div class="about-sidebar reveal reveal-delay-2">
+        <div class="about-badge-large"><span class="badge-num-lg">25+</span><span class="badge-text-lg">Years of Trusted Service</span></div>
+        <div class="about-highlights">
+          <div class="highlight-item"><div class="highlight-icon"><i class="fas fa-medal"></i></div><div class="highlight-text"><h4>Premium Quality</h4><p>BIS Hallmarked gold and certified diamonds only</p></div></div>
+          <div class="highlight-item"><div class="highlight-icon"><i class="fas fa-users"></i></div><div class="highlight-text"><h4>5000+ Happy Clients</h4><p>Trusted by thousands of families in Surat</p></div></div>
+          <div class="highlight-item"><div class="highlight-icon"><i class="fas fa-palette"></i></div><div class="highlight-text"><h4>Custom Designs</h4><p>Bespoke jewellery crafted to your specifications</p></div></div>
+          <div class="highlight-item"><div class="highlight-icon"><i class="fas fa-exchange-alt"></i></div><div class="highlight-text"><h4>Exchange &amp; Buyback</h4><p>Fair value for your old jewellery</p></div></div>
+        </div>
+        <div style="text-align:center;margin-top:2rem;"><a href="#" onclick="showPage('contact')" class="btn-primary" style="display:inline-block;">Contact Us Today</a></div>
+      </div>
+    </div>
+  </section>
+  <div style="background:var(--gold);padding:60px 2rem;">
+    <div style="max-width:1000px;margin:0 auto;display:grid;grid-template-columns:repeat(4,1fr);gap:2rem;text-align:center;">
+      <div><div style="font-family:'Cormorant Garamond',serif;font-size:3rem;font-weight:700;color:var(--black);line-height:1;">25+</div><div style="font-size:0.7rem;letter-spacing:3px;text-transform:uppercase;color:rgba(0,0,0,0.6);margin-top:0.5rem;">Years of Service</div></div>
+      <div><div style="font-family:'Cormorant Garamond',serif;font-size:3rem;font-weight:700;color:var(--black);line-height:1;">5K+</div><div style="font-size:0.7rem;letter-spacing:3px;text-transform:uppercase;color:rgba(0,0,0,0.6);margin-top:0.5rem;">Happy Clients</div></div>
+      <div><div style="font-family:'Cormorant Garamond',serif;font-size:3rem;font-weight:700;color:var(--black);line-height:1;">1000+</div><div style="font-size:0.7rem;letter-spacing:3px;text-transform:uppercase;color:rgba(0,0,0,0.6);margin-top:0.5rem;">Designs</div></div>
+      <div><div style="font-family:'Cormorant Garamond',serif;font-size:3rem;font-weight:700;color:var(--black);line-height:1;">4.6★</div><div style="font-size:0.7rem;letter-spacing:3px;text-transform:uppercase;color:rgba(0,0,0,0.6);margin-top:0.5rem;">Google Rating</div></div>
+    </div>
+  </div>
+</div><!-- end page-about -->
+
+<!-- ═══════════════════════════════════════════════════════ -->
+<!--                    CONTACT PAGE                       -->
+<!-- ═══════════════════════════════════════════════════════ -->
+<div id="page-contact" style="display:none;">
+  <div class="page-hero">
+    <h1 class="page-hero-title">Contact <span>Us</span></h1>
+    <p class="page-hero-sub">We'd Love to Hear From You</p>
+    <div class="breadcrumb"><a href="#" onclick="showPage('home')">Home</a><i class="fas fa-chevron-right"></i><span>Contact</span></div>
+  </div>
+  <section style="background:var(--black);">
+    <div class="section-label" style="color:var(--gold);">Reach Out</div>
+    <h2 class="section-title" style="color:var(--white);">Get In Touch</h2>
+    <div class="section-divider"><div class="divider-line"></div><div class="divider-gem"></div><div class="divider-line" style="background:linear-gradient(to right,var(--gold),transparent);"></div></div>
+    <div class="contact-grid">
+      <div class="contact-info reveal">
+        <div class="contact-info-item"><div class="contact-info-icon"><i class="fas fa-map-marker-alt"></i></div><div class="contact-info-text"><h4>Visit Our Store</h4><p>98, 99, 100 Syam Nagar Society,<br>Vraj Chowk, Simada Gam,<br>Surat, Gujarat 395013</p></div></div>
+        <div class="contact-info-item"><div class="contact-info-icon"><i class="fas fa-phone-alt"></i></div><div class="contact-info-text"><h4>Call Us</h4><a href="tel:+919909900283">+91 99099 00283</a></div></div>
+        <div class="contact-info-item"><div class="contact-info-icon"><i class="fab fa-whatsapp"></i></div><div class="contact-info-text"><h4>WhatsApp</h4><a href="https://wa.me/919909900283">+91 99099 00283</a></div></div>
+        <div class="contact-info-item"><div class="contact-info-icon"><i class="fas fa-clock"></i></div><div class="contact-info-text"><h4>Store Hours</h4><p>Monday – Saturday<br>10:00 AM – 8:00 PM<br><span style="color:rgba(255,255,255,0.4);font-size:0.82rem;">Sunday: By Appointment</span></p></div></div>
+      </div>
+      <div class="contact-form reveal reveal-delay-2">
+        <h3 style="font-family:'Cormorant Garamond',serif;font-size:1.6rem;color:var(--white);margin-bottom:0.5rem;">Send an Enquiry</h3>
+        <p style="color:rgba(255,255,255,0.4);font-size:0.85rem;margin-bottom:2rem;">We'll get back to you within 24 hours.</p>
+        <div class="form-group"><label class="form-label">Your Name *</label><input type="text" class="form-input" placeholder="Enter your full name" id="contact-name"></div>
+        <div class="form-group"><label class="form-label">Phone Number *</label><input type="tel" class="form-input" placeholder="+91 XXXXX XXXXX" id="contact-phone"></div>
+        <div class="form-group"><label class="form-label">Message</label><textarea class="form-textarea" placeholder="Tell us about your jewellery requirements..." id="contact-message"></textarea></div>
+        <button class="btn-submit" onclick="handleContactSubmit()"><i class="fas fa-paper-plane" style="margin-right:8px;"></i>Send Enquiry</button>
+      </div>
+    </div>
+  </section>
+  <div style="height:450px;">
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3719.9693!2d72.8398!3d21.1975!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2sSyam+Nagar+Society%2C+Vraj+Chowk%2C+Simada+Gam%2C+Surat+395013!5e0!3m2!1sen!2sin!4v1234567890" style="width:100%;height:100%;border:none;display:block;" allowfullscreen="" loading="lazy"></iframe>
+  </div>
+</div><!-- end page-contact -->
+
+<!-- ═══════ FOOTER ═══════ -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <span class="logo-main" style="color:var(--gold);">Govindji Jewellers</span>
+      <div class="footer-gujarati">ગોવિંદજી જ્વેલર્સ</div>
+      <p class="footer-desc">A trusted name in Surat for premium gold, diamond, and bridal jewellery. Crafting memories since establishment.</p>
+    </div>
+    <div class="footer-col">
+      <h4>Quick Links</h4>
+      <a href="#" onclick="showPage('home')">Home</a>
+      <a href="#" onclick="showPage('collection')">Collection</a>
+      <a href="#" onclick="showPage('gallery')">Gallery</a>
+      <a href="#" onclick="showPage('about')">About Us</a>
+      <a href="#" onclick="showPage('contact')">Contact</a>
+    </div>
+    <div class="footer-col">
+      <h4>Contact</h4>
+      <a href="tel:+919909900283">+91 99099 00283</a>
+      <a href="https://wa.me/919909900283">WhatsApp Us</a>
+      <a href="#">Surat, Gujarat 395013</a>
+      <a href="#">Mon–Sat: 10AM – 8PM</a>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span class="footer-copy">© 2025 Govindji Jewellers. All rights reserved.</span>
+    <div class="footer-social">
+      <a href="#" title="Instagram"><i class="fab fa-instagram"></i></a>
+      <a href="#" title="Facebook"><i class="fab fa-facebook-f"></i></a>
+      <a href="https://wa.me/919909900283" title="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+    </div>
+  </div>
+</footer>
+
+<!-- WhatsApp Floating Button -->
+<a href="https://wa.me/919909900283?text=Hello!%20I'm%20interested%20in%20your%20jewellery%20collection." target="_blank" class="whatsapp-btn" title="Chat on WhatsApp">
+  <i class="fab fa-whatsapp"></i>
+</a>
+
+<!-- Upload Toast Notification -->
+<div id="upload-toast" class="upload-toast"></div>
+
+<!-- 👇 Our Custom JavaScript -->
+<script src="script.js"></script>
+</body>
+</html>
